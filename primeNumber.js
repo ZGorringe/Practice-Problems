@@ -32,3 +32,21 @@ var prime = function(num) {
 	}
 	return true;
 }
+
+
+var prime = function(num) {
+	var numArr = [2,3,4,5,6,7,8,9];
+	var flag = 'prime';
+	for (var i = 0; i < numArr.length; i++) {
+		if (numArr[i] === num) {
+			numArr.splice(i, 1);
+		}
+		if (num % numArr[i] === 0) {
+			flag = 'notprime';
+			break;
+		} else {
+			flag;
+		}
+	}
+	console.log(flag);
+}
