@@ -31,3 +31,15 @@ var find = function(arr) {
 	return false;
 }
 
+//Write a function that accepts a number, n, and returns the nth Fibonacci number.
+
+var returnFib = function (n) {
+	var fib = [];
+	fib[0] = 0;
+	fib[1] = 1;
+	for (var i = 2; i <= 100; i++) {
+		fib[i] = fib[i-2] + fib[i-1];
+		return fib;
+	}
+	console.log(fib[n]);
+}
