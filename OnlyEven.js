@@ -14,13 +14,13 @@ var onlyEven = function(arr) {
 	}
 }
 
-//Working solution
+//Working solution -->
 
 function evenOccurrence(array) {
 	var occurrences = {};
 	for (var i = 0; i < array.length; i++) {
 		var n = array[i];
-		if (n in occurrences) {
+		if (n in occurrences) {//
 			occurrences[n]++;
 		} else {
 			occurrences[n] = 1;
