@@ -12,3 +12,15 @@ var flatten = function(arr) {
 	var merged = [].concat.apply([], arr);
 	return merged;
 }
+
+flatten = function(a, b) {
+	var flattened = b;
+	for(var i = 0; i < a.length; i++) {
+		if(Array.isArray(a[i])) {
+			flatten(a[i], flattened);
+		} else {
+			flattened.push(a[i]);
+		}
+	}
+	return flattened;
+}
