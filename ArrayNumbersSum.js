@@ -26,3 +26,25 @@ var foo = function(arr) {
 	}
 	return false;
 }
+
+var fooRecursion = function(arr, i, j, k) {
+	if(!i && !j && !k){
+		i=0;
+		j=i+1;
+		k=i+2;
+	}
+
+	if(i > arr.length -1) {
+		return false;
+	}
+
+	if(j > arr.length -1 || k > arr.length -1) {
+		return fooRecursion(arr, i + 1)
+	}
+
+	if(arr[i] + arr[j] + arr[k] === 0) {
+		return true
+	} else {
+		return fooRecursion(arr, i, j + 1, k + 1)
+	}
+}
